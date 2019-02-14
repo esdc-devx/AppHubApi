@@ -1,0 +1,7 @@
+node_modules
+buildcontainer.sh
+LICENSE
+README.md
+runcontainer.sh
+.gitignore
+.git
