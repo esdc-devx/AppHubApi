@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/esdc-devx/AppHubApi/issues"
   },
-  "homepage": "https://github.com/esdc-devx/AppHubApi#readme"
+  "homepage": "https://github.com/esdc-devx/AppHubApi#readme",
+  "dependencies": {
+    "apollo-server": "^2.4.0",
+    "graphql": "^14.1.1"
+  }
 }
