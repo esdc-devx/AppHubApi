@@ -4,7 +4,8 @@
   "description": "API for the AppHub Dahsboard",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
   },
   "repository": {
     "type": "git",
@@ -12,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/esdc-devx/AppHubApi/issues"
   },
