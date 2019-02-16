@@ -1,0 +1,25 @@
+{
+  "name": "AppHubApi",
+  "version": "1.0.0",
+  "description": "API for the AppHub Dahsboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esdc-devx/AppHubApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/esdc-devx/AppHubApi/issues"
+  },
+  "homepage": "https://github.com/esdc-devx/AppHubApi#readme",
+  "dependencies": {
+    "apollo-server": "^2.4.0",
+    "graphql": "^14.1.1"
+  }
+}
