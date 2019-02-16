@@ -1,46 +1,43 @@
 const { ApolloServer, gql } = require('apollo-server');
+const { GraphQLDate } = require('graphql-iso-date');
 
-// This is a (sample) collection of books we'll be able to query
-// the GraphQL server for.  A more complete example might fetch
-// from an existing data source like a REST API or database.
 const Projects = [
   {
     name: 'Foo',
     coverage: 100,
-    lastUpdated: 'yyyy-MM-dd'
+    lastUpdated: () =>  new Date(1982,01,01)
   },
   {
     name: 'Bar',
     coverage: 75,
-    lastUpdated: 'yyyy-MM-dd'
+    lastUpdated: () => new Date(1982, 01, 01)
   },
   {
     name: 'Baz',
     coverage: 50,
-    lastUpdated: 'yyyy-MM-dd'
+    lastUpdated: () => new Date(1982, 01, 01)
   },
   {
     name: 'Far',
     coverage: 25,
-    lastUpdated: 'yyyy-MM-dd'
+    lastUpdated: () => new Date(1982, 01, 01)
   },
   {
     name: 'Boo',
     coverage: 0,
-    lastUpdated: 'yyyy-MM-dd'
+    lastUpdated: () => new Date(1982, 01, 01)
   }
 ];
-
 // Type definitions define the "shape" of your data and specify
 // which ways the data can be fetched from the GraphQL server.
 const typeDefs = gql`
   # Comments in GraphQL are defined with the hash (#) symbol.
+  scalar Date
 
-  # This "Book" type can be used in other type declarations.
   type Project {
     name: String
     coverage: Int
-    lastUpdated: String
+    lastUpdated: Date
   }
 
   # The "Query" type is the root of all GraphQL queries.
@@ -56,6 +53,7 @@ const resolvers = {
   Query: {
     projects: () => Projects,
   },
+  Date : GraphQLDate
 };
 
 // In the most basic sense, the ApolloServer can be started
